@@ -11,13 +11,6 @@ export function GoldPrice({ apiData }) {
     price_gram_24k,
   } = apiData;
 
-  // convert timestamp to readable date time formate
-  const unixTimestamp = timestamp;
-  const milliseconds = unixTimestamp * 1000;
-  const dateObject = new Date(milliseconds);
-  const humanDateFormat = dateObject.toLocaleString();
-  // console.log(humanDateFormat);
-
   const [value, setValue] = useState("");
   const [input, setInput] = useState("");
   const [ans, setAnswer] = useState(0);
@@ -59,7 +52,7 @@ export function GoldPrice({ apiData }) {
             borderRadius: "10px",
           }}
         >
-          <h2 style={{fontWeight:"bolder", marginTop: "10px"}}>GOLD RATE CALCULATOR</h2>
+          <h2 style={{fontWeight:"bolder", marginTop: "10px", textShadow: "0 0 10px gold"}}>GOLD RATE CALCULATOR</h2>
           <div
             style={{
               display: "flex",
@@ -141,7 +134,7 @@ export function GoldPrice({ apiData }) {
             padding: "10px"
           }}
         >
-          <h1 Style={{fontWeight:"bolder"}}>Gold price one gram</h1>
+          <h2 style={{fontWeight:"bolder", marginTop: "10px", textShadow: "0 0 10px gold"}}>GOLD PRICE ONE GRAM</h2>
           <label
             style={{ width: "95%", margin: "10px", fontSize: "20px", fontWeight: "bold", color: "orange", textShadow:"0 0 2px red"}}
             htmlFor="goldType"

@@ -20,7 +20,7 @@ export default function Charts() {
   .then(data=>setData(data));
 },[])
 
-  return (<div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", minHeight: "100vh"}}>
+  return (<div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", minHeight: "100vh", backgroundColor: "rgb(180, 232, 232)"}}>
     <h2>Past ten days report</h2>
       <LineChart
         width={1000}
